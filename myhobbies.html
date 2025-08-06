@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Hobbies - Paul</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Reset styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ffffff;
+    }
+
+    /* Starry Night Background */
+    body {
+      background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), 
+                  #0a0a1a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeIn 1s ease-in-out;
+      overflow-x: hidden;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    .stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .star {
+      position: absolute;
+      background-color: #fff;
+      border-radius: 50%;
+      animation: twinkle var(--duration) infinite ease-in-out;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 1; }
+    }
+
+    /* Main Content */
+    .content-container {
+      width: 100%;
+      max-width: 1200px;
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 50px;
+      font-weight: 700;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+      background: linear-gradient(to right, #ffffff, #00aced);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    /* Hobbies Gallery */
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .gallery-item {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 20px;
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      max-width: 350px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-10px);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .caption {
+      padding: 20px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Back Button */
+    .back-button {
+      margin-top: 40px;
+    }
+
+    .back-button a {
+      display: inline-block;
+      text-decoration: none;
+      padding: 12px 30px;
+      background-color: #00aced;
+      color: white;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: all 0.3s;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .back-button a:hover {
+      background-color: #007bb5;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .gallery {
+        gap: 30px;
+      }
+
+      .gallery-item {
+        max-width: 300px;
+      }
+
+      .caption {
+        font-size: 1rem;
+        padding: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .content-container {
+        padding: 40px 15px;
+      }
+
+      .gallery-item img {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Starry Night Background -->
+  <div class="stars" id="stars"></div>
+
+  <!-- Main Content -->
+  <div class="content-container">
+    <h1>My Hobbies</h1>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="c:\Users\Earl\Desktop\github.io\bbss.webp" alt="Basketball in the slum">
+        <div class="caption">Basketball in the slum – Amid cracked pavements and rusted hoops, I don't just play basketball I pour my soul into every shot. It's not the place, it's the passion.</div>
+      </div>
+      <div class="gallery-item">
+        <img src="c:\Users\Earl\Desktop\github.io\mechanic.jpg" alt="Mechanic's hand with grease">
+        <div class="caption">Grease and gears – With every turn of a wrench, I connect with the heartbeat of machines. It's more than repair  it's resurrection.</div>
+      </div>
+      <div class="gallery-item">
+        <img src="c:\Users\Earl\Desktop\github.io\Screenshot 2025-08-06 220542.png" alt="Drag van">
+        <div class="caption">My passion for speed – Behind the wheel of a drag van, I don't just chase speed  I chase the thrill that makes me feel alive.</div>
+      </div>
+    </div>
+
+    <div class="back-button">
+      <a href="index.html">← Back to Homepage</a>
+    </div>
+  </div>
+
+  <script>
+    // Create stars
+    const starsContainer = document.getElementById('stars');
+    const starCount = 200;
+    
+    for (let i = 0; i < starCount; i++) {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      
+      // Random size between 1px and 3px
+      const size = Math.random() * 2 + 1;
+      star.style.width = `${size}px`;
+      star.style.height = `${size}px`;
+      
+      // Random position
+      star.style.left = `${Math.random() * 100}%`;
+      star.style.top = `${Math.random() * 100}%`;
+      
+      // Random animation duration (2-5 seconds)
+      star.style.setProperty('--duration', `${Math.random() * 3 + 2}s`);
+      
+      // Random delay
+      star.style.animationDelay = `${Math.random() * 5}s`;
+      
+      starsContainer.appendChild(star);
+    }
+  </script>
+</body>
+</html>

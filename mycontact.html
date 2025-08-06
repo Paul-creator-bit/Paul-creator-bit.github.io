@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me - Paul</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Reset styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ffffff;
+    }
+
+    /* Starry Night Background */
+    body {
+      background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), 
+                  #0a0a1a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+      overflow: hidden;
+      position: relative;
+      padding: 20px;
+    }
+
+    .stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .star {
+      position: absolute;
+      background-color: #fff;
+      border-radius: 50%;
+      animation: twinkle var(--duration) infinite ease-in-out;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 1; }
+    }
+
+    /* Contact Content */
+    .contact-container {
+      max-width: 700px;
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 20px;
+      backdrop-filter: blur(8px);
+      margin: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 30px;
+      font-weight: 700;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+      background: linear-gradient(to right, #ffffff, #00aced);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: 1px;
+    }
+
+    .contact-list {
+      list-style: none;
+      font-size: 1.4rem;
+      line-height: 2.2;
+      text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);
+      margin-bottom: 30px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .contact-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .social-link {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.3rem;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      text-decoration: none;
+    }
+
+    .social-link:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 172, 237, 0.4);
+    }
+
+    .social-link.facebook:hover {
+      background-color: #1877f2;
+    }
+
+    .social-link.instagram:hover {
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    }
+
+    /* Back Button */
+    .back-button {
+      margin-top: 40px;
+    }
+
+    .back-button a {
+      display: inline-block;
+      text-decoration: none;
+      padding: 12px 30px;
+      background-color: #00aced;
+      color: white;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: all 0.3s;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .back-button a:hover {
+      background-color: #007bb5;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .contact-list {
+        font-size: 1.1rem;
+      }
+
+      .contact-container {
+        padding: 30px 20px;
+      }
+
+      .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .contact-list {
+        font-size: 1rem;
+        line-height: 1.8;
+      }
+
+      .contact-item {
+        flex-direction: column;
+        gap: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Starry Night Background -->
+  <div class="stars" id="stars"></div>
+
+  <!-- Contact Content -->
+  <div class="contact-container">
+    <h1>Contact Me</h1>
+
+    <ul class="contact-list">
+      <li class="contact-item">
+        <div class="contact-icon">
+          <i class="fas fa-mobile-alt"></i>
+        </div>
+        <span>Mobile: 0931 923 2463</span>
+      </li>
+    </ul>
+
+    <div class="social-links">
+      <a href="https://www.facebook.com/paul.comicho?mibextid=wwXIfr&rdid=1NgclS9TyLlPIH3W&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19B1MLrzHT%2F%3Fmibextid%3DwwXIfr" 
+         class="social-link facebook" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/unk_cool_?igsh=MW55bWhyZnliMGh3aQ%3D%3D&utm_source=qr" 
+         class="social-link instagram" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Back Button -->
+  <div class="back-button">
+    <a href="index.html">← Back to Homepage</a>
+  </div>
+
+  <script>
+    // Create stars
+    const starsContainer = document.getElementById('stars');
+    const starCount = 200;
+    
+    for (let i = 0; i < starCount; i++) {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      
+      // Random size between 1px and 3px
+      const size = Math.random() * 2 + 1;
+      star.style.width = `${size}px`;
+      star.style.height = `${size}px`;
+      
+      // Random position
+      star.style.left = `${Math.random() * 100}%`;
+      star.style.top = `${Math.random() * 100}%`;
+      
+      // Random animation duration (2-5 seconds)
+      star.style.setProperty('--duration', `${Math.random() * 3 + 2}s`);
+      
+      // Random delay
+      star.style.animationDelay = `${Math.random() * 5}s`;
+      
+      starsContainer.appendChild(star);
+    }
+  </script>
+</body>
+</html>
